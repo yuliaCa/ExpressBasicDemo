@@ -1,0 +1,22 @@
+<%- include('partials/head') %>
+<body>
+
+    <%- include('partials/navbar') %>
+
+    <div class="container">
+        <h1> <%= name %> </h1>
+        <h2><%= description  %></h2>
+        <p>The total number of subscribers : <%= subscribers %></p>
+        <hr/>
+        <%  posts.forEach((eachPost)=> {   %>
+            <div>
+                <h3><%= eachPost.title %></h5>
+                <p>Kudos to: <%= eachPost.author %></p>
+                <% if (eachPost.img){  %>
+                    <img class="img-fluid" src="<%= eachPost.img %>">
+                    <% } %>
+             </div>
+        <% })  %>
+    </div>
+</body>
+</html>
